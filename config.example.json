@@ -1,0 +1,143 @@
+{
+  "rust_projects": [
+    "~/projects/my-rust-app",
+    "~/code/another-rust-workspace"
+  ],
+  "docker_builders": [],
+  "report_dirs": [
+    {
+      "name": "Chrome Gemini on-device model",
+      "path": "~/Library/Application Support/Google/Chrome/OptGuideOnDeviceModel",
+      "enabled": true,
+      "note": "Gemini Nano model used by Chrome's on-device AI features, often around 4 GB. If you don't use them, turn on-device AI off in Chrome's settings; deleting the folder alone just makes Chrome download it again."
+    },
+    {
+      "name": "Chrome ServiceWorker CacheStorage",
+      "path": "~/Library/Application Support/Google/Chrome/Default/Service Worker/CacheStorage",
+      "enabled": true,
+      "note": "Offline caches of websites and PWAs. Clear cached files from Chrome's 'Delete browsing data' dialog instead of deleting the folder; keep Cookies and IndexedDB."
+    },
+    {
+      "name": "Chrome extensions",
+      "path": "~/Library/Application Support/Google/Chrome/Default/Extensions",
+      "enabled": true,
+      "note": "Remove extensions from chrome://extensions, not by deleting folders."
+    },
+    {
+      "name": "Claude Desktop VM bundles",
+      "path": "~/Library/Application Support/Claude/vm_bundles",
+      "enabled": true,
+      "note": "Local VM used by Claude Desktop's Cowork feature, can be around 10 GB. Quit Claude Desktop first and remove it only if you understand how Cowork sessions and their data are affected."
+    },
+    {
+      "name": "Xcode DerivedData",
+      "path": "~/Library/Developer/Xcode/DerivedData",
+      "enabled": true,
+      "note": "Build output only. Safe to delete while Xcode is closed."
+    },
+    {
+      "name": "Xcode CoreSimulator",
+      "path": "~/Library/Developer/CoreSimulator",
+      "enabled": true,
+      "note": "Simulator devices and data. 'xcrun simctl delete unavailable' removes devices for runtimes you no longer have; remove runtimes in Xcode > Settings > Components."
+    },
+    {
+      "name": "SwiftPM cache",
+      "path": "~/Library/Caches/org.swift.swiftpm",
+      "enabled": true,
+      "note": "Downloaded Swift packages. Re-downloaded on the next build if removed."
+    },
+    {
+      "name": "Corepack global cache",
+      "path": "~/Library/Caches/node/corepack",
+      "enabled": true
+    },
+    {
+      "name": "node-gyp cache",
+      "path": "~/Library/Caches/node-gyp",
+      "enabled": true
+    },
+    {
+      "name": "Playwright browsers",
+      "path": "~/Library/Caches/ms-playwright",
+      "enabled": true,
+      "note": "Browsers downloaded by Playwright. 'npx playwright uninstall --all' removes them; projects download them again when needed."
+    },
+    {
+      "name": "Cargo registry",
+      "path": "~/.cargo/registry",
+      "enabled": true,
+      "note": "Downloaded crate sources. Safe to delete; crates are re-downloaded on the next build."
+    },
+    {
+      "name": "Cargo git dependencies",
+      "path": "~/.cargo/git",
+      "enabled": true
+    },
+    {
+      "name": "rustup toolchains",
+      "path": "~/.rustup",
+      "enabled": true,
+      "note": "Installed Rust toolchains. List with 'rustup toolchain list' and remove unused ones with 'rustup toolchain uninstall <name>'."
+    },
+    {
+      "name": "Hugging Face models",
+      "path": "~/.cache/huggingface/hub",
+      "enabled": true,
+      "scan_large_files": true,
+      "note": "Downloaded models. Use 'huggingface-cli delete-cache' to pick which ones to remove."
+    },
+    {
+      "name": "Ollama models",
+      "path": "~/.ollama/models",
+      "enabled": true,
+      "scan_large_files": true,
+      "note": "List models with 'ollama list' and remove with 'ollama rm <model>'."
+    },
+    {
+      "name": "LM Studio models",
+      "path": "~/.lmstudio/models",
+      "enabled": true,
+      "scan_large_files": true,
+      "note": "Delete models from LM Studio's model list inside the app."
+    },
+    {
+      "name": "VS Code update cache",
+      "path": "~/Library/Caches/com.microsoft.VSCode.ShipIt",
+      "enabled": true,
+      "note": "Downloaded update packages. Safe to delete after quitting VS Code."
+    },
+    {
+      "name": "GitHub Desktop update cache",
+      "path": "~/Library/Caches/com.github.GitHubClient.ShipIt",
+      "enabled": true,
+      "note": "Downloaded update packages. Safe to delete after quitting GitHub Desktop."
+    },
+    {
+      "name": "Atomic Chat llama.cpp models",
+      "path": "~/Library/Application Support/Atomic Chat/data/llamacpp/models",
+      "enabled": false,
+      "scan_large_files": true,
+      "note": "Local GGUF models. Remove unused models from inside the app, not the whole data folder."
+    },
+    {
+      "name": "ego lite extensions",
+      "path": "~/Library/Application Support/Citro Labs/ego lite/Default/Extensions",
+      "enabled": false,
+      "note": "Old extension versions can pile up here. Keep current versions, Secure Preferences, Local Extension Settings, and any wallet extension data."
+    },
+    {
+      "name": "Google AI Edge models",
+      "path": "~/Library/Application Support/com.google.AIEdgeForesight/models",
+      "enabled": false,
+      "scan_large_files": true,
+      "note": "On-device models. Check whether you still need them before removing anything."
+    },
+    {
+      "name": "Google AI Edge model cache",
+      "path": "~/Library/Application Support/com.google.AIEdgeForesight/model_cache",
+      "enabled": false,
+      "scan_large_files": true
+    }
+  ]
+}
